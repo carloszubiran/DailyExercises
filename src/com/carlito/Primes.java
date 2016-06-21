@@ -25,16 +25,6 @@ public class Primes {
 
     //endregion PROPERTIES
 
-    //region CONSTRUCTORS
-
-
-    //endregion CONSTRUCTORS
-
-    //region GETTERS / SETTERS
-
-
-    //endregion GETTERS / SETTERS
-
     //region CUSTOM METHODS
 
     public void printPrimeList(int number) {
@@ -44,16 +34,16 @@ public class Primes {
             // if a number is has more that two factors it is not prime
             // so keep track how many factors they are per number
             int factors = 0;
-        // this loop is the check the number of the previous loop
-        // to see if there is a factor
+            // this loop is the check the number of the previous loop
+            // to see if there is a factor
             for (int j = 1; (j <= i) && (factors <= 1); j++) {
                 // if the number is factorial, add it the the count of factors
                 if ((i % j == 0))
                 {
                     factors += 1;
                 }
-                // if the number has ONLY 2 factors and it it equals itself
-                // or if the number is one add it to the list
+                // if the number has ONLY 2 factors AND it equals itself add
+                // it to the list OR if the number is one add it to the list
                 if ((factors == 2) && (i == j) || (i == 1))
                 {
                     primeList.add(i);
@@ -68,7 +58,7 @@ public class Primes {
             System.out.println(integer);
         }
         System.out.println("This is the total of all the primes: " + total);
-        
+
     }
 
 
