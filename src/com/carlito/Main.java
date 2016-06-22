@@ -1,55 +1,35 @@
 package com.carlito;
 
+import com.carlito.annotationAndReflection.CustomAnnotation;
+import com.carlito.annotationAndReflection.UseAnnotation;
+
+import java.lang.annotation.Annotation;
+import java.lang.reflect.Field;
+import java.lang.reflect.Method;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.List;
 
 public class Main {
 
-    public static Primes primes = new Primes();
-    public static Fibonacci fib = new Fibonacci();
+//    public static Primes primes = new Primes();
+//    public static Fibonacci fib = new Fibonacci();
 
     public static void main(String[] args) {
 
-//        primes.printPrimeList(1000);
-//        fib.printFib(1000);
+        for (Field f : UseAnnotation.class.getDeclaredFields()) {
+            System.out.println(f.getName());
+        }
 
-//        RomanNumerals romanNumerals = new RomanNumerals();
-//
-//        System.out.println(romanNumerals.convertNumToRoman(2439));
+        for (Method m : UseAnnotation.class.getMethods()) {
+            System.out.println(m.getName());
+        }
 
-//        RandomArrayGenerator randomArrayGenerator = new RandomArrayGenerator();
-//
-//        int randomArray[];
-//
-//        randomArray = randomArrayGenerator.returnRandomizedArray(10, 100);
-//        randomArrayGenerator.printArray(randomArray);
-
-//        RollerCoaster rollerCoaster = new RollerCoaster();
-//
-//        List<String> wordList = new ArrayList<>();
-//
-//        String testString1 = "To be, or not to be: that is the question.\n" +
-//                "Whether 'tis nobler in the mind to suffer.\n" +
-//                "The slings and arrows of outrageous fortune.\n" +
-//                "Or to take arms against a sea of troubles.\n" +
-//                "And by opposing end them, to die: to sleep.";
-//
-//        String testString2 = "H@ppy Birthday!";
-//
-//        for (String string : rollerCoaster.changeCaseToRollerCoaster(testString1)) {
-//            System.out.println(string + " ");
-//        }
+        for (Annotation a: UseAnnotation.class.getAnnotations()) {
+            System.out.println(a);
+        }
 
     }
-
-    // An example of VarArgs I.E. a variable arguments in a method as is put into an array.
-    public String[] returnStrings(String... setOfStrings) {
-
-        String arrayOfStrings[] = setOfStrings;
-
-        return arrayOfStrings;
-    }
-
 
 }
