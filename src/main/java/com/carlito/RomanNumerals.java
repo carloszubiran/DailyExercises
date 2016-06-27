@@ -25,7 +25,7 @@ public class RomanNumerals {
     // convert to Roman numeral
     // exceptions ex: 4, 9 ,49
 
-    HashMap<String, Integer> hashMap = new HashMap<>();
+    HashMap<String, Integer> hashMap = new HashMap();
     StringBuilder numberToRoman = new StringBuilder();
 
     public HashMap<String, Integer> getHashMap() {

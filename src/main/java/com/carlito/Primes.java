@@ -21,7 +21,7 @@ public class Primes {
 
     //region PROPERTIES
 
-    List<Integer> primeList = new ArrayList<>();
+    List<Integer> primeList = new ArrayList();
 
     //endregion PROPERTIES
 

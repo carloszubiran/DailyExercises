@@ -20,25 +20,6 @@ import java.util.Random;
 public class InsertionSort {
 
 
-    //region PROPERTIES
-
-
-    //endregion PROPERTIES
-
-    //region CONSTRUCTORS
-
-
-    //endregion CONSTRUCTORS
-
-    //region GETTERS / SETTERS
-
-
-    //endregion GETTERS / SETTERS
-
-    //region CUSTOM METHODS
-
-
-    //endregion CUSTOM METHODS
 
 
 }

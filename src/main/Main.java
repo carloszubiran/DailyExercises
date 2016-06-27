@@ -27,8 +27,12 @@ public class Main {
             System.out.println(a);
         }
 
+        System.out.println(Integer.toString(1));
+
     }
 
-    Stack<Integer> aStack = new Stack<>();
+    Stack<Integer> aStack = new Stack();
+
+
 
 }

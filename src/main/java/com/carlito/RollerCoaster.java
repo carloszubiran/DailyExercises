@@ -15,7 +15,7 @@ public class RollerCoaster {
     public List<String> changeCaseToRollerCoaster(String stringToBeConverted) {
         int validCharCounter = 0;
 
-        List<String> convertedStringList = new ArrayList<>();
+        List<String> convertedStringList = new ArrayList();
         StringBuilder tempStringBuilder = new StringBuilder();
         //check to see if there is a is a valid character.
         for (String string: stringToBeConverted.split("\n")) {
