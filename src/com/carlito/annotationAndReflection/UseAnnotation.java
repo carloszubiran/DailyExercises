@@ -8,6 +8,8 @@ public class UseAnnotation {
     @CustomAnnotation(anInt = 100, aString = "someString")
     public void methodThatUsesAnnotation() {
 
+
+
     }
 
 
