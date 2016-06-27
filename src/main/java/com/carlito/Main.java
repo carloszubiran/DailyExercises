@@ -31,7 +31,7 @@ public class Main {
 
     }
 
-    Stack<Integer> aStack = new Stack();
+    Stack<Integer> aStack = new Stack<>();
 
 
 
