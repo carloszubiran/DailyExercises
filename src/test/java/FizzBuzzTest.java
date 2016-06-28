@@ -1,3 +1,4 @@
+import org.apache.log4j.Logger;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -10,6 +11,8 @@ import static org.junit.Assert.assertSame;
  * Created by carloszubiran on 6/26/16.
  */
 public class FizzBuzzTest {
+
+    Logger logger = Logger.getLogger(this.getClass());
 
     private FizzBuzz fizzBuzz;
 
@@ -58,16 +61,16 @@ public class FizzBuzzTest {
 
         for(int i = 1; i <= 100; i++) {
             if (i % 15 == 0) {
-                System.out.println(i + " == " + fizzBuzz.evaluate(i));
+                logger.info(i + " == " + fizzBuzz.evaluate(i));
                 assertEquals("FizzBuzz", fizzBuzz.evaluate(i));
             } else if (i % 3 == 0) {
-                System.out.println(i + " == " + fizzBuzz.evaluate(i));
+                logger.info(i + " == " + fizzBuzz.evaluate(i));
                 assertEquals("Fizz", fizzBuzz.evaluate(i));
             } else if (i % 5 == 0) {
-                System.out.println(i + " == " + fizzBuzz.evaluate(i));
+                logger.info(i + " == " + fizzBuzz.evaluate(i));
                 assertEquals("Buzz", fizzBuzz.evaluate(i));
             } else if (Integer.toString(i).equals(fizzBuzz.evaluate(i))) {
-                System.out.println(i + " == " + fizzBuzz.evaluate(i));
+                logger.info(i + " == " + fizzBuzz.evaluate(i));
             }
         }
     }
