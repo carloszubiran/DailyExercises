@@ -13,7 +13,7 @@ import static org.junit.Assert.assertEquals;
 public class FizzBuzzTest {
 
     //Get Logger to work with the console and log to a file.
-//    private static final Logger logger = LoggerFactory.getLogger(FizzBuzzTest.class);
+    private static final Logger logger = LoggerFactory.getLogger(FizzBuzzTest.class);
 
     private FizzBuzz fizzBuzz;
 
@@ -62,16 +62,16 @@ public class FizzBuzzTest {
 
         for(int i = 1; i <= 100; i++) {
             if (i % 15 == 0) {
-                System.out.println(i + " == " + fizzBuzz.evaluate(i));
+                logger.info(i + " == " + fizzBuzz.evaluate(i));
                 assertEquals("FizzBuzz", fizzBuzz.evaluate(i));
             } else if (i % 3 == 0) {
-                System.out.println(i + " == " + fizzBuzz.evaluate(i));
+                logger.info(i + " == " + fizzBuzz.evaluate(i));
                 assertEquals("Fizz", fizzBuzz.evaluate(i));
             } else if (i % 5 == 0) {
-                System.out.println(i + " == " + fizzBuzz.evaluate(i));
+                logger.info(i + " == " + fizzBuzz.evaluate(i));
                 assertEquals("Buzz", fizzBuzz.evaluate(i));
             } else if (Integer.toString(i).equals(fizzBuzz.evaluate(i))) {
-                System.out.println(i + " == " + fizzBuzz.evaluate(i));
+                logger.info(i + " == " + fizzBuzz.evaluate(i));
             }
         }
     }
